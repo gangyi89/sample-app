@@ -1,15 +1,10 @@
 import React from "react";
-import axios from "axios";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Main = () => {
-  const [fqdn, setFqdn] = useState("");
-  const [error, setError] = useState("");
+  const [error] = useState("");
   const [token, setToken] = useState("");
-
-
-  console.log("fqdn: ", fqdn);
 
   const handleChange = (event) => {
     setToken(event.target.value);
