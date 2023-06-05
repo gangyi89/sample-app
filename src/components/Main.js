@@ -26,7 +26,7 @@ const Main = () => {
         <p className="md:text-xl text-xl text-gray-600">
           Input token and submit to ePay
         </p>
-        <form method="post" action="https://esepaydemo-neit5c7efq-an.a.run.app/select">
+        <form method="post" action="https://esepaydemo3-neit5c7efq-an.a.run.app/select">
           <div>
             <input type="hidden" value={token} name="token" id="token" />
           </div>
