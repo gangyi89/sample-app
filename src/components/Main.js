@@ -26,18 +26,22 @@ const Main = () => {
         <p className="md:text-xl text-xl text-gray-600">
           Input token and submit to ePay
         </p>
-        <div>
-          <input
-            type="text"
-            id="large-input"
-            onChange={handleChange}
-            value={token}
-            className="w-[550px] p-4 mt-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          />
-        </div>
         <form method="post" action="https://esepaydemo-neit5c7efq-an.a.run.app/select">
-          <input type="hidden" value={token} name="token" id="token" />
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">Proceed to ePay</button>
+          <div>
+            <input type="hidden" value={token} name="token" id="token" />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="large-input"
+              onChange={handleChange}
+              value={token}
+              className="w-[550px] p-4 mt-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <button type="submit" className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black">Proceed to ePay</button>
+          </div>
         </form>
         <p className="text-rose-700">{error}</p>
       </div>
