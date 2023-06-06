@@ -1,13 +1,15 @@
-import React from "react";
-
+import { React } from "react";
+import { Routes, Route } from "react-router-dom"
 import Main from "./components/Main";
+import About from "./components/About";
 
 function App() {
   return (
-    <div>
-      <Main />
-      <h1 className="text-3xl font-bold underline text-white">Hello world!</h1>
-    </div>
+      <Routes>
+        <Route path="/" element={<Main/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="*" element={<Main />} />
+      </Routes>    
   );
 }
 
